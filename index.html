@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Abby ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Georgia, serif;
+    color: white;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top, #8f4b8f, transparent 45%),
+        linear-gradient(135deg, #160b20, #351238, #160b20);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* FLOATING HEARTS */
+
+.floating {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.floating span {
+    position: absolute;
+    bottom: -40px;
+    animation: rise 8s linear infinite;
+    opacity: 0;
+}
+
+@keyframes rise {
+
+    0% {
+        transform: translateY(0) scale(.7) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: .8;
+    }
+
+    100% {
+        transform: translateY(-110vh) scale(1.3) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* CARD */
+
+.card {
+    width: 91%;
+    max-width: 430px;
+
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,.13);
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 70px rgba(0,0,0,.45);
+
+    z-index: 5;
+}
+
+/* PAGES */
+
+.page {
+    display: none;
+    animation: appear .6s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.emoji {
+    font-size: 55px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    margin: 10px 0 18px;
+
+    font-size: 31px;
+
+    text-shadow:
+        0 3px 15px rgba(255,120,200,.4);
+}
+
+p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #ffeefa;
+}
+
+/* BUTTONS */
+
+button {
+    margin-top: 20px;
+
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 40px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    color: #60285f;
+    background: #fff;
+
+    box-shadow:
+        0 7px 20px rgba(0,0,0,.25);
+
+    transition: .25s;
+}
+
+button:active {
+    transform: scale(.94);
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.03);
+}
+
+/* PHOTO */
+
+.photo {
+    width: 150px;
+    height: 150px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 4px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 0 30px rgba(255,170,230,.5);
+
+    margin-bottom: 10px;
+}
+
+/* SECRET */
+
+.secret {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 18px;
+
+    background: rgba(255,255,255,.1);
+
+    animation: appear .5s ease;
+}
+
+/* LITTLE FOOTER */
+
+.small {
+    opacity: .65;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- FLOATING HEARTS -->
+
+<div class="floating">
+
+<span style="left:5%;animation-delay:0s;font-size:22px;">❤️</span>
+<span style="left:15%;animation-delay:2s;font-size:18px;">💕</span>
+<span style="left:30%;animation-delay:4s;font-size:25px;">💗</span>
+<span style="left:48%;animation-delay:1s;font-size:17px;">✨</span>
+<span style="left:65%;animation-delay:3s;font-size:24px;">❤️</span>
+<span style="left:80%;animation-delay:5s;font-size:20px;">💖</span>
+<span style="left:92%;animation-delay:1.5s;font-size:18px;">✨</span>
+
+</div>
+
+
+<div class="card">
+
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="page1">
+
+<div class="emoji">🌙❤️</div>
+
+<h1>Hey Abby...</h1>
+
+<p>
+
+I made this little corner of the internet
+just for you.
+
+<br><br>
+
+And yes...
+
+you have to click everything. 😂
+
+</p>
+
+<button onclick="nextPage(2)">
+Open it 👀
+</button>
+
+</div>
+
+
+
+<!-- PAGE 2 -->
+
+<div class="page" id="page2">
+
+<div class="emoji">🥹</div>
+
+<h1>There's a problem...</h1>
+
+<p>
+
+Tomorrow I'm going back to school.
+
+<br>
+
+You're opening on Wednesday.
+
+<br><br>
+
+Which means...
+
+I'm going to miss you.
+
+</p>
+
+<button onclick="nextPage(3)">
+How badly? 🤨
+</button>
+
+</div>
+
+
+
+<!-- PAGE 3 -->
+
+<div class="page" id="page3">
+
+<div class="emoji">😭❤️</div>
+
+<h1>Probably a lot.</h1>
+
+<p>
+
+I'll miss your messages.
+
+<br>
+
+Your voice.
+
+<br>
+
+Your jokes.
+
+<br>
+
+Even the random things you do. 😂
+
+<br><br>
+
+Basically...
+
+school is about to become unnecessarily boring.
+
+</p>
+
+<button onclick="nextPage(4)">
+Anything else? 👀
+</button>
+
+</div>
+
+
+
+<!-- PAGE 4 -->
+
+<div class="page" id="page4">
+
+<div class="emoji">💪😂</div>
+
+<h1>Actually... yes.</h1>
+
+<p>
+
+Remember when I said I'd work out
+until I'm strong enough to carry you?
+
+<br><br>
+
+Yeah...
+
+I'm taking that VERY seriously. 😂💪
+
+<br><br>
+
+I've got boyfriend duties to prepare for.
+
+</p>
+
+<button onclick="nextPage(5)">
+That's actually cute ❤️
+</button>
+
+</div>
+
+
+
+<!-- PAGE 5 -->
+
+<div class="page" id="page5">
+
+<div class="emoji">🏫❤️</div>
+
+<h1>Different schools...</h1>
+
+<p>
+
+You'll have your school.
+
+<br>
+
+I'll have mine.
+
+<br><br>
+
+We'll both get busy.
+
+<br><br>
+
+But none of that changes the fact
+that you're still going to be on my mind.
+
+❤️
+
+</p>
+
+<button onclick="nextPage(6)">
+One more thing...
+</button>
+
+</div>
+
+
+
+<!-- PAGE 6 -->
+
+<div class="page" id="page6">
+
+<div class="emoji">💌</div>
+
+<h1>A little secret...</h1>
+
+<p>
+
+I don't actually need a reason
+to think about you.
+
+<br><br>
+
+It just happens.
+
+</p>
+
+<button onclick="showSecret()">
+Open secret 💌
+</button>
+
+<div id="secretBox" class="secret" style="display:none;">
+
+<p>
+
+If you ever miss me...
+
+just remember:
+
+<br><br>
+
+<strong>
+I'm probably missing you too. ❤️
+</strong>
+
+</p>
+
+<button onclick="nextPage(7)">
+Okay... 🥹
+</button>
+
+</div>
+
+</div>
+
+
+
+<!-- PAGE 7 -->
+
+<div class="page" id="page7">
+
+<div class="emoji">❤️</div>
+
+<h1>I'll miss you, Abby.</h1>
+
+<p>
+
+More than this little website
+can explain.
+
+<br><br>
+
+Different schools.
+
+Different schedules.
+
+Different days.
+
+<br><br>
+
+Still us.
+
+❤️
+
+<br><br>
+
+So take care of yourself for me,
+okay?
+
+</p>
+
+<button onclick="nextPage(8)">
+There's one last thing... 👀
+</button>
+
+</div>
+
+
+
+<!-- PAGE 8 -->
+
+<div class="page" id="page8">
+
+<div class="emoji">🥹❤️</div>
+
+<h1>My final message...</h1>
+
+<p>
+
+Somewhere at another school,
+there's a certain idiot thinking about you.
+
+😂❤️
+
+<br><br>
+
+And that idiot is going to be
+counting the days until he sees you again.
+
+<br><br>
+
+<strong>
+I'll miss you. ❤️
+</strong>
+
+</p>
+
+<button onclick="nextPage(9)">
+Replay ❤️
+</button>
+
+<p class="small">
+
+Made especially for Abby.
+
+</p>
+
+</div>
+
+
+
+<!-- PAGE 9 -->
+
+<div class="page" id="page9">
+
+<div class="emoji">🌹</div>
+
+<h1>Wait...</h1>
+
+<p>
+
+You really thought that was it? 😂
+
+<br><br>
+
+Okay okay...
+
+<br>
+
+Go back and read it again. ❤️
+
+</p>
+
+<button onclick="nextPage(1)">
+Start again 💕
+</button>
+
+</div>
+
+
+</div>
+
+
+<script>
+
+function nextPage(number) {
+
+    document.querySelectorAll(".page").forEach(function(page) {
+
+        page.classList.remove("active");
+
+    });
+
+    document.getElementById("page" + number).classList.add("active");
+}
+
+
+function showSecret() {
+
+    document.getElementById("secretBox").style.display = "block";
+
+}
+
+</script>
+
+
+</body>
+  </html>
