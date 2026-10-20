@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To My Abby 💗</title>
+
+<style>
+* { box-sizing: border-box; }
+
+:root {
+  --pink: #ff8db7;
+  --rose: #ff5f99;
+  --cream: #fff2f7;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--cream);
+  background:
+    radial-gradient(ellipse at 15% 15%, #633e80 0%, transparent 40%),
+    radial-gradient(ellipse at 85% 80%, #772e61 0%, transparent 40%),
+    linear-gradient(150deg, #100d29, #271334 55%, #120c27);
+}
+
+.stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(2px 2px at 15% 25%, #fff 60%, transparent),
+    radial-gradient(1px 1px at 72% 18%, #fff 60%, transparent),
+    radial-gradient(2px 2px at 88% 43%, #ffd5e8 60%, transparent),
+    radial-gradient(1px 1px at 36% 75%, #fff 60%, transparent),
+    radial-gradient(2px 2px at 63% 60%, #fff 60%, transparent),
+    radial-gradient(1px 1px at 25% 90%, #ffd5e8 60%, transparent),
+    radial-gradient(1px 1px at 95% 85%, #fff 60%, transparent);
+  background-size: 260px 260px;
+  animation: twinkle 5s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  from { opacity: .35; }
+  to { opacity: 1; }
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 36px 18px 45px;
+  text-align: center;
+}
+
+.eyebrow {
+  font: 11px Arial, sans-serif;
+  letter-spacing: 5px;
+  color: #ffbad5;
+  text-transform: uppercase;
+}
+
+.moon {
+  font-size: 43px;
+  margin: 23px 0 12px;
+  filter: drop-shadow(0 0 18px #ffc3e6);
+  animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+  to { filter: drop-shadow(0 0 28px #ff75b8); }
+}
+
+h1 {
+  font-size: clamp(36px, 10vw, 53px);
+  line-height: 1.15;
+  font-weight: normal;
+  margin: 12px 0;
+  color: #ffe3ef;
+  text-shadow: 0 0 25px #ff73b455;
+}
+
+h1 span { color: var(--pink); }
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #e7c8dd;
+  max-width: 340px;
+  margin: 16px auto 27px;
+}
+
+.glass {
+  padding: 26px 21px;
+  border: 1px solid #ffffff26;
+  border-radius: 26px;
+  background: linear-gradient(135deg, #ffffff13, #ffffff06);
+  box-shadow: 0 18px 60px #00000026;
+  backdrop-filter: blur(12px);
+}
+
+.tiny-heart {
+  color: #ff9ec5;
+  font-size: 21px;
+  letter-spacing: 7px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-weight: normal;
+  color: #ffc0d9;
+  font-size: 25px;
+  margin: 8px 0 13px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+button {
+  font-family: Georgia, serif;
+  cursor: pointer;
+  border: 1px solid #ffffff55;
+  border-radius: 30px;
+  color: white;
+  background: linear-gradient(110deg, #e64e91, #a65bd2);
+  padding: 15px 24px;
+  font-size: 15px;
+  box-shadow: 0 6px 25px #e64e9144;
+  transition: transform .2s, box-shadow .2s;
+}
+
+button:active {
+  transform: scale(.97);
+}
+
+#openBtn {
+  margin-top: 15px;
+  width: 100%;
+}
+
+#letter {
+  display: none;
+  text-align: left;
+  animation: unfold .8s ease;
+}
+
+@keyframes unfold {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#letter p { color: #f6dfeb; }
+
+#letter .emphasis {
+  padding: 15px;
+  margin: 20px 0;
+  border-left: 2px solid #ff8db7;
+  background: #ff8db710;
+  border-radius: 0 12px 12px 0;
+}
+
+#letter .promise {
+  text-align: center;
+  padding: 19px 10px;
+  margin-top: 22px;
+  border-top: 1px solid #ffffff25;
+  border-bottom: 1px solid #ffffff25;
+  color: #ffc1dc;
+  font-size: 21px;
+  line-height: 1.7;
+}
+
+#letter .ending {
+  text-align: center;
+  color: #ffb1d1;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.tomorrow {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff9cc51c, #c58cff18);
+  border: 1px solid #ffb5d533;
+}
+
+.tomorrow .icon { font-size: 31px; }
+
+.tomorrow h3 {
+  color: #ffc4dc;
+  font-size: 21px;
+  font-weight: normal;
+  margin: 9px 0;
+}
+
+.tomorrow p {
+  font-size: 14px;
+  color: #ead5e7;
+  margin-bottom: 0;
+}
+
+.footer {
+  color: #bda1c5;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  line-height: 2;
+}
+
+.floating {
+  position: fixed;
+  bottom: -35px;
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  animation: floatUp 8s linear forwards;
+}
+
+@keyframes floatUp {
+  0% { transform: translateY(0) rotate(0); opacity: 0; }
+  15% { opacity: .7; }
+  85% { opacity: .5; }
+  100% { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="stars"></div>
+
+<main class="wrap">
+  <div class="eyebrow">A little piece of my heart</div>
+  <div class="moon">☾ ✧</div>
+
+  <h1>For my <span>Abby</span></h1>
+
+  <p class="subtitle">
+    If I could send you one little thing tonight,
+    it would be a reminder of how much you mean to me. 💗
+  </p>
+
+  <section class="glass">
+    <div class="tiny-heart">♡ ✦ ♡</div>
+    <h2>Hey, my favourite person.</h2>
+
+    <p>
+      There's something I want you to understand,
+      and I'd rather tell you gently than leave
+      anything unsaid.
+    </p>
+
+    <button id="openBtn" onclick="openLetter()">
+      Open this little letter 💌
+    </button>
+
+    <div id="letter">
+      <h2 style="text-align:center; margin-top:28px;">
+        Dear Abby, ♡
+      </h2>
+
+      <p>
+        First, my girl, <strong>I'm not blaming you
+        for what happened earlier.</strong> Please don't
+        read this thinking that I'm upset with you or
+        that I'm keeping score. I'm not.
+      </p>
+
+      <p>
+        We were teasing each other, and things went a
+        little differently than we intended. I know my
+        reaction played a part in that, too, and I'm
+        genuinely sorry for my part in it.
+      </p>
+
+      <p>
+        I never wanted you to feel guilty, sad, or as
+        though you had done something terrible. You
+        don't have to be perfect around me, Abby.
+        I want you to feel comfortable being yourself
+        with me — even when we're joking, being silly,
+        or misunderstanding each other.
+      </p>
+
+      <div class="emphasis">
+        <p style="margin-top:0">
+          ♡ <strong>I'm not against you, my love.
+          We're on the same side.</strong>
+        </p>
+        <p style="margin-bottom:0">
+          One awkward moment doesn't erase all the
+          good between us. I want us to keep learning
+          how to understand each other, with patience
+          and kindness.
+        </p>
+      </div>
+
+      <p>
+        And there's another little thing I want you
+        to know. I stayed up late tonight because I
+        wanted to spend time with you. Not because
+        you owe me your time, and not to make you feel
+        bad about it. I simply wanted that chance to
+        talk to you.
+      </p>
+
+      <p>
+        Sometimes, when I'm hoping to hear from you,
+        the hours pass without me noticing. It's
+        the thought of sharing a little moment with
+        you that kept me looking forward to tonight.
+        I chose to stay up because I wanted to —
+        you don't owe me anything for that. ♡
+      </p>
+
+      <div class="promise">
+        And tomorrow, my girl…<br>
+        I'm still looking forward to our call. ☎️💗
+      </div>
+
+      <p>
+        That hasn't changed. I still look forward to
+        hearing your voice, sharing a laugh, and
+        letting an ordinary day give us one more
+        memory to smile about.
+      </p>
+
+      <p>
+        There's no pressure, though. If you're shy,
+        we can take it slowly. We don't need the
+        perfect words or a perfect conversation.
+        Even a simple little hello is enough to begin.
+        I just want us both to feel comfortable.
+      </p>
+
+      <div class="tomorrow">
+        <div class="icon">🌙 ☎️ ✨</div>
+        <h3>Our little tomorrow</h3>
+        <p>
+          A new day, a fresh start, and hopefully
+          a chance to hear your voice. No pressure.
+          Just us, being ourselves.
+        </p>
+      </div>
+
+      <p>
+        Abby, I can't promise that I'll always say
+        everything perfectly. But I can keep trying
+        to listen better, react more gently, and
+        understand you instead of letting a small
+        moment become something bigger.
+      </p>
+
+      <p>
+        So if you're going to sleep soon, please
+        don't carry the weight of this conversation
+        into your night. I'm not blaming you.
+        I'm not asking you to fix anything for me.
+        I just wanted you to know where my heart is.
+      </p>
+
+      <p>
+        You're important to me, and I want the time
+        we share to feel safe, sweet, and genuine.
+        We can leave today behind and meet tomorrow
+        with a little more understanding. 💗
+      </p>
+
+      <div class="ending">
+        Rest well, my Abby. 🌷<br>
+        No hard feelings from me.<br>
+        No blame. Just care. ♡<br><br>
+        <strong>Still looking forward to you.<br>
+        Still hoping for our call.<br>
+        Still your person. ❤️</strong>
+      </div>
+
+      <p style="text-align:center; font-size:12px; color:#c9a9ca;">
+        Made for you, with care, tonight.
+      </p>
+    </div>
+  </section>
+
+  <div class="footer">
+    ONE LITTLE LETTER · JUST FOR YOU<br>
+    <span style="color:#ff9dc4;">♡</span>
+  </div>
+</main>
+
+<script>
+function openLetter() {
+  const letter = document.getElementById("letter");
+  const button = document.getElementById("openBtn");
+
+  letter.style.display = "block";
+  button.style.display = "none";
+
+  setTimeout(function() {
+    letter.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }, 100);
+
+  for (let i = 0; i < 16; i++) {
+    setTimeout(createHeart, i * 180);
+  }
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  const symbols = ["♡", "♥", "✧", "💗", "✨"];
+
+  heart.className = "floating";
+  heart.textContent = symbols[
+    Math.floor(Math.random() * symbols.length)
+  ];
+
+  heart.style.left = Math.random() * 95 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 18) + "px";
+  heart.style.color = Math.random() > 0.5 ? "#ff9dc4" : "#e4baff";
+  heart.style.animationDuration = (6 + Math.random() * 4) + "s";
+
+  document.body.appendChild(heart);
+
+  setTimeout(function() {
+    heart.remove();
+  }, 11000);
+}
+</script>
+</body>
+  </html>
+  
